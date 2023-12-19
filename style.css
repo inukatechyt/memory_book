@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+/* Universal styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: rgb(233, 233, 233);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+}
+
+.bg-image{
+  background-image: url("https://i.pinimg.com/564x/d4/8c/2d/d48c2de0debd3bef102256f979862bbd.jpg");
+  background-size:cover;
+  background-position:center center;
+  height: 100vh;
+  position:fixed;
+  left:0;
+  right:0;
+  z-index:-1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  width:400px;
+  border-radius: 10px;
+  overflow: hidden;
+-webkit-box-shadow: 0px 0px 40px 9px rgba(0,0,0,0.6); 
+box-shadow: 0px 0px 40px 9px rgba(0,0,0,0.4);
+}
+
+.head {
+  background: rgb(0, 132, 255);
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.head h1,
+p {
+  text-align: center;
+  color: white;
+}
+
+.head p {
+  font-size: 12px;
+}
+
+label {
+  margin-left: 20px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin: 5px 20px 20px 20px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid rgb(0, 132, 255);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  outline: none;
+  background: rgb(0, 132, 255);
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+  margin: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+button:hover {
+  background: rgb(0, 105, 204);
+}
+
+
+@media screen and (max-width: 417px){
+  form{
+    width:100%;
+    height:100%;
+  }
+}
+
+.attractive-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.attractive-link:hover {
+    background-color: #10f710;
+}
+
+/* ... (your existing styles) */
+
+/* ... (your existing styles) */
+
+button {
+    outline: none;
+    background: rgb(0, 132, 255);
+    border: none;
+    padding: 10px;
+    border-radius: 50px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    }
+}
+
+button:hover {
+    background: red;
+    animation: glow 2s infinite; /* Add glowing animation on hover */
+}
+
+/* ... (your existing styles) */
+
+.loading-spinner {
+    display: none;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid rgb(0, 132, 255);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Add the following styles to make the button look disabled during loading */
+button.loading {
+    background: #ddd !important;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+/* ... (your existing styles) */
+
+.loading-text {
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(0, 132, 255);
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+/* ... (your existing styles) */
+
+.loading-text {
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    animation: fadeInOutColorChange 2s infinite;
+}
+
+@keyframes fadeInOutColorChange {
+    0%, 100% {
+        opacity: 0;
+        color: rgb(0, 132, 255);
+    }
+    50% {
+        opacity: 1;
+        color: red; /* Change the color as needed */
+    }
+}
+/* ... (your existing styles) */
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Adjust the styling of the form content to be on top of the video */
+form {
+    position: relative;
+    z-index: 1;
+}
+/* ... (your existing styles) */
+
+/* Style for the flower image */
+.flower {
+    position: absolute;
+    width: 20px; /* Adjust the flower size */
+    height: auto;
+    pointer-events: none;
+    animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
